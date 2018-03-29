@@ -16,5 +16,19 @@
 	<classpathentry kind="lib" path="Dependency/okio-1.13.0.jar"/>
 	<classpathentry kind="lib" path="Dependency/sikulixsetup-1.1.2.jar"/>
 	<classpathentry kind="lib" path="Dependency/sikulixapi.jar"/>
+	<classpathentry kind="lib" path="Dependency/Apache Poi/commons-codec-1.10.jar"/>
+	<classpathentry kind="lib" path="Dependency/Apache Poi/commons-collections4-4.1.jar"/>
+	<classpathentry kind="lib" path="Dependency/Apache Poi/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="Dependency/Apache Poi/curvesapi-1.04.jar"/>
+	<classpathentry kind="lib" path="Dependency/Apache Poi/junit-4.12.jar"/>
+	<classpathentry kind="lib" path="Dependency/Apache Poi/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="Dependency/Apache Poi/poi-3.17.jar"/>
+	<classpathentry kind="lib" path="Dependency/Apache Poi/poi-examples-3.17.jar"/>
+	<classpathentry kind="lib" path="Dependency/Apache Poi/poi-excelant-3.17.jar"/>
+	<classpathentry kind="lib" path="Dependency/Apache Poi/poi-ooxml-3.17.jar"/>
+	<classpathentry kind="lib" path="Dependency/Apache Poi/poi-ooxml-schemas-3.17.jar"/>
+	<classpathentry kind="lib" path="Dependency/Apache Poi/poi-scratchpad-3.17.jar"/>
+	<classpathentry kind="lib" path="Dependency/Apache Poi/xmlbeans-2.6.0.jar"/>
+	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

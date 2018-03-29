@@ -3,6 +3,7 @@ package profileCreation_testScripts;
 import org.sikuli.script.FindFailed;
 import org.sikuli.script.Screen;
 
+import dataManipulation.ExcelManipulation;
 import genericMethods.PC_App_Initialize;
 import imageLocators.PC_App_PicGrid;
 import imageLocators.PC_App_Profile;
@@ -22,17 +23,27 @@ public static void main(String[] args) throws FindFailed {
 		PC_App_Initialize pc = new PC_App_Initialize(new Screen());
 		PC_App_Profile profile = new PC_App_Profile(new Screen());
 		PC_App_PicGrid grid = new PC_App_PicGrid(new Screen());
+		ExcelManipulation em = new ExcelManipulation();
 		
 		pc.appLaunch();
-		profile.addProfile();
-		profile.setProfileName("Entertainment");
-		grid.selectAllGridImage("14");
-		
-		if (profile.verifySaveActive()!=null) {
-			profile.clickSaveActive();
-		}else {
-			System.err.println("Unable to save the profile");
+		try {
+			
+			profile.addProfile();
+			profile.setProfileName("Entertainment");
+			grid.selectAllGridImage("14");
+			
+			if (profile.verifySaveActive()!=null) {
+				profile.clickSaveActive();
+				em.writeDataToExcel("PCApplication_TestCases", 18, 2, "PASS");
+			}else {
+				System.err.println("Unable to save the profile");
+				em.writeDataToExcel("PCApplication_TestCases", 18, 2, "FAIL");
+			}
+			
+		}catch (Exception e) {
+			e.printStackTrace();
 		}
+		
 		
 		pc.appQuit();
 		
