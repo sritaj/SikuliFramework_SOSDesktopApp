@@ -42,7 +42,6 @@ public class PC_App_Screens {
 	/* This method is to used to click on About tab */ 
 	public void aboutTab() throws FindFailed {
 
-		
 		Pattern aboutus_tab = new Pattern(abouttab);
 		sr.click(aboutus_tab);
 		

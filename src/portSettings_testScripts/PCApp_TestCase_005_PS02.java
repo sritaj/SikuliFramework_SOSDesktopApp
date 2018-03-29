@@ -1,7 +1,10 @@
 package portSettings_testScripts;
+import java.io.FileNotFoundException;
+
 import org.sikuli.script.FindFailed;
 import org.sikuli.script.Screen;
 
+import dataManipulation.ExcelManipulation;
 import genericMethods.PC_App_Initialize;
 import imageLocators.PC_App_Screens;
 
@@ -15,14 +18,22 @@ Test Case - Verify user is able to navigate to Profile tab from Port Settings ta
 
 public class PCApp_TestCase_005_PS02 {
 	
-	public static void main(String[] args) throws FindFailed {
+	public static void main(String[] args) throws FindFailed, FileNotFoundException {
 		
 		PC_App_Initialize pc = new PC_App_Initialize(new Screen());
 		PC_App_Screens psr = new PC_App_Screens(new Screen());
+		ExcelManipulation em = new ExcelManipulation();
 		
 		pc.appLaunch();
-		psr.portSettingsTab();
-		psr.profileTab();
+		try {
+			psr.portSettingsTab();
+			psr.profileTab();
+			em.writeDataToExcel("PCApplication_TestCases", 30, 2, "PASS");
+		}catch(Exception e) {
+			em.writeDataToExcel("PCApplication_TestCases", 30, 2, "FAIL");
+			e.printStackTrace();
+		}
+		
 		pc.appQuit();
 	}
 

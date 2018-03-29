@@ -3,6 +3,7 @@ package profileCreation_testScripts;
 import org.sikuli.script.FindFailed;
 import org.sikuli.script.Screen;
 
+import dataManipulation.ExcelManipulation;
 import genericMethods.PC_App_Initialize;
 import imageLocators.PC_App_PicGrid;
 import imageLocators.PC_App_Profile;
@@ -22,16 +23,24 @@ public class PCApp_TestCase_002_C12 {
 			PC_App_Initialize pc = new PC_App_Initialize(new Screen());
 			PC_App_Profile profile = new PC_App_Profile(new Screen());
 			PC_App_PicGrid grid = new PC_App_PicGrid(new Screen());
+			ExcelManipulation em = new ExcelManipulation();
 			
 			pc.appLaunch();
-			profile.addProfile();
-			grid.selectGridImage("13");
-			
-			if(profile.verifySave()!=null) {
-				System.out.println("Save button is not active");
-			}else {
-				System.err.println("Save button is active");
+			try {
+				profile.addProfile();
+				grid.selectGridImage("13");
+				
+				if(profile.verifySave()!=null) {
+					System.out.println("Save button is not active");
+					em.writeDataToExcel("PCApplication_TestCases", 17, 2, "PASS");
+				}else {
+					System.err.println("Save button is active");
+					em.writeDataToExcel("PCApplication_TestCases", 17, 2, "FAIL");
+				}
+			}catch (Exception e) {
+				e.printStackTrace();
 			}
+			
 		
 			pc.appQuit();
 	}

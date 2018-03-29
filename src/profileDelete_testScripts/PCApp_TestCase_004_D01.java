@@ -3,6 +3,7 @@ package profileDelete_testScripts;
 import org.sikuli.script.FindFailed;
 import org.sikuli.script.Screen;
 
+import dataManipulation.ExcelManipulation;
 import genericMethods.PC_App_Initialize;
 import imageLocators.PC_App_Profile;
 
@@ -20,15 +21,22 @@ public class PCApp_TestCase_004_D01 {
 		
 		PC_App_Initialize pc = new PC_App_Initialize(new Screen());
 		PC_App_Profile profile = new PC_App_Profile(new Screen());
+		ExcelManipulation em = new ExcelManipulation();
 		
 		pc.appLaunch();
-		if (profile.verifySelectProfile()==null) {
-			System.out.println("Select Profile button is inactive");
-			pc.appQuit();
-		}else {
-			System.err.println("Select Profile button is active - TEST CASE FAILED");
-			pc.appQuit();
+		try {
+			if (profile.verifySelectProfile()!=null) {
+				profile.selectProfile();
+				profile.clickRemoveProfile();
+				em.writeDataToExcel("PCApplication_TestCases", 27, 2, "PASS");
+			}else {
+				em.writeDataToExcel("PCApplication_TestCases", 27, 2, "FAIL");
+			}
+		}catch(Exception e) {
+			e.printStackTrace();
 		}
+		pc.appQuit();
+	
 	
 		
 	}

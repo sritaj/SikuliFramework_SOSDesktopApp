@@ -3,6 +3,7 @@ package profile_testScripts;
 import org.sikuli.script.FindFailed;
 import org.sikuli.script.Screen;
 
+import dataManipulation.ExcelManipulation;
 import genericMethods.PC_App_Initialize;
 import imageLocators.PC_App_PicGrid;
 
@@ -20,14 +21,22 @@ public class PCApp_TestCase_001_P02 {
 		
 		PC_App_Initialize pc = new PC_App_Initialize(new Screen());
 		PC_App_PicGrid grid = new PC_App_PicGrid(new Screen());
+		ExcelManipulation em = new ExcelManipulation();
 		
 		pc.appLaunch();
 		
-		if(grid.imageGridState()==null) {
-			System.out.println("Pic grid is not active");
-		}else {
-			System.err.println("Pic grid is active");
+		try {
+			if(grid.imageGridState()==null) {
+				System.out.println("Pic grid is not active");
+				em.writeDataToExcel("PCApplication_TestCases", 4, 2, "PASS");
+			}else {
+				System.err.println("Pic grid is active");
+				em.writeDataToExcel("PCApplication_TestCases", 4, 2, "FAIL");
+			}
+		}catch(Exception e) {
+			e.printStackTrace();
 		}
+		
 		
 		pc.appQuit();
 	}
