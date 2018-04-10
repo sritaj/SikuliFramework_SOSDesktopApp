@@ -18,9 +18,9 @@ public class PC_App_Screens {
 	
 	/* Below Screen class is initialized and path to required images are stored in the Strings defined */ 
 	
-	String profiletab = "F:\\GitHub\\SmartOLEDSwitch\\Images\\Profile tab.png";
-	String portsettingstab = "F:\\GitHub\\SmartOLEDSwitch\\Images\\Port Settings tab.png";
-	String abouttab = "F:\\GitHub\\SmartOLEDSwitch\\Images\\About tab.png";
+	String profiletab = "F:\\GitHub\\SmartOLEDSwitch\\Images\\Profile na.png";
+	String portsettingstab = "F:\\GitHub\\SmartOLEDSwitch\\Images\\Port Settings na.png";
+	String abouttab = "F:\\GitHub\\SmartOLEDSwitch\\Images\\About na.png";
 	Screen sr;
 	
 	/* This method is to used to click on Profile tab */ 

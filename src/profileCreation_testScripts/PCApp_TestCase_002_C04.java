@@ -34,10 +34,10 @@ public static void main(String[] args) throws FindFailed {
 			
 			if (profile.verifySaveActive()!=null) {
 				System.out.println("Save button is active");
-				em.writeDataToExcel("PCApplication_TestCases", 9, 2, "PASS");
+				em.writeDataToExcel("PCApplication_TestCases", 8, 2, "PASS");
 			}else {
 				System.err.println("Save button is not active");
-				em.writeDataToExcel("PCApplication_TestCases", 9, 2, "FAIL");
+				em.writeDataToExcel("PCApplication_TestCases", 8, 2, "FAIL");
 			}
 		}catch (Exception e) {
 			e.printStackTrace();

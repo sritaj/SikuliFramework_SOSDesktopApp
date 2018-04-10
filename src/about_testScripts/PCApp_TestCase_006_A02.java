@@ -29,9 +29,9 @@ public class PCApp_TestCase_006_A02 {
 		pc.appLaunch();
 		try {
 			psr.profileTab();
-			em.writeDataToExcel("PCApplication_TestCases", 34, 2, "PASS");
+			em.writeDataToExcel("PCApplication_TestCases", 39, 2, "PASS");
 		}catch (Exception e) {
-			em.writeDataToExcel("PCApplication_TestCases", 34, 2, "FAIL");
+			em.writeDataToExcel("PCApplication_TestCases", 39, 2, "FAIL");
 			e.printStackTrace();
 		}
 	

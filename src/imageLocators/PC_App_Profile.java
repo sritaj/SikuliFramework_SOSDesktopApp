@@ -30,6 +30,7 @@ public class PC_App_Profile {
 	String profilecount = "F:\\GitHub\\SmartOLEDSwitch\\Images\\Saved Profile count.png";
 	String bitmapUnsupported = "F:\\GitHub\\SmartOLEDSwitch\\Images\\Bitmap uneven.png";
 	
+	
 	Screen sr;
 	
 	/* This method is to verify if the add profile button is present and returns the value */ 

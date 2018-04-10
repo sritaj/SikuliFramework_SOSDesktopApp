@@ -2,9 +2,7 @@
 <suite name="Suite1" verbose="1" >
   <test name="Regression" >
     <classes>
-       <class name=="testNG_Scripts.profile_TestNG" />
-       <class name="testNG_Scripts.about_TestNG" />
-       <class name=="testNG_Scripts.portSettings_TestNG" />
+       <class name="testNG_Scripts.profile_TestNG" />
     </classes>
   </test>
 

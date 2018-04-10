@@ -1,5 +1,7 @@
 package profileEditing_testScripts;
 
+import static org.testng.Assert.assertFalse;
+
 import java.io.FileNotFoundException;
 
 import org.sikuli.script.FindFailed;
@@ -37,6 +39,7 @@ public static void main(String[] args) throws FindFailed, FileNotFoundException 
 					profile.clickSaveActive();
 					em.writeDataToExcel("PCApplication_TestCases", 26, 2, "PASS");
 				} else {
+					assertFalse(true);
 					System.err.println("Save button is not active");
 					em.writeDataToExcel("PCApplication_TestCases", 26, 2, "FAIL");
 				}

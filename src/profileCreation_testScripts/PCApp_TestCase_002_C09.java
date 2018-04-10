@@ -30,11 +30,11 @@ public class PCApp_TestCase_002_C09 {
 			if (profile.verifyProfile()!=null) {
 				profile.addProfile();
 				grid.selectGridImage("13");
-				em.writeDataToExcel("PCApplication_TestCases", 14, 2, "PASS");
+				em.writeDataToExcel("PCApplication_TestCases", 13, 2, "PASS");
 				
 			}else {
 				System.out.println("Profile is not visible");
-				em.writeDataToExcel("PCApplication_TestCases", 14, 2, "FAIL");
+				em.writeDataToExcel("PCApplication_TestCases", 13, 2, "FAIL");
 			}
 		}catch (Exception e) {
 				e.printStackTrace();

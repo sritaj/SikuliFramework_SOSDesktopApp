@@ -1,5 +1,7 @@
 package profileEditing_testScripts;
 
+import static org.testng.Assert.assertFalse;
+
 import org.sikuli.script.FindFailed;
 import org.sikuli.script.Screen;
 
@@ -34,6 +36,7 @@ public static void main(String[] args) throws FindFailed {
 				em.writeDataToExcel("PCApplication_TestCases", 25, 2, "PASS");
 				
 			} else {
+				assertFalse(true);
 				System.err.println("Profile is not present");
 				em.writeDataToExcel("PCApplication_TestCases", 25, 2, "FAIL");
 			}

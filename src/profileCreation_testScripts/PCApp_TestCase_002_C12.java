@@ -32,10 +32,10 @@ public class PCApp_TestCase_002_C12 {
 				
 				if(profile.verifySave()!=null) {
 					System.out.println("Save button is not active");
-					em.writeDataToExcel("PCApplication_TestCases", 17, 2, "PASS");
+					em.writeDataToExcel("PCApplication_TestCases", 15, 2, "PASS");
 				}else {
 					System.err.println("Save button is active");
-					em.writeDataToExcel("PCApplication_TestCases", 17, 2, "FAIL");
+					em.writeDataToExcel("PCApplication_TestCases", 15, 2, "FAIL");
 				}
 			}catch (Exception e) {
 				e.printStackTrace();

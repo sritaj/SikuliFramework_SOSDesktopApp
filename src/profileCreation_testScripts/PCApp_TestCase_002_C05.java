@@ -29,9 +29,9 @@ public static void main(String[] args) throws FindFailed {
 			
 			if(profile.verifyRemoveProfile()!=null) {
 				profile.clickRemoveProfile();
-				em.writeDataToExcel("PCApplication_TestCases", 10, 2, "PASS");
+				em.writeDataToExcel("PCApplication_TestCases", 9, 2, "PASS");
 			}else {
-				em.writeDataToExcel("PCApplication_TestCases", 10, 2, "FAIL");
+				em.writeDataToExcel("PCApplication_TestCases", 9, 2, "FAIL");
 			}
 		}catch (Exception e) {
 			e.printStackTrace();

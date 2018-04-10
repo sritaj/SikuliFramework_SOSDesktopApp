@@ -1,5 +1,7 @@
 package profile_testScripts;
 
+import static org.testng.Assert.assertFalse;
+
 import org.sikuli.script.FindFailed;
 import org.sikuli.script.Screen;
 
@@ -28,10 +30,11 @@ public class PCApp_TestCase_001_P02 {
 		try {
 			if(grid.imageGridState()==null) {
 				System.out.println("Pic grid is not active");
-				em.writeDataToExcel("PCApplication_TestCases", 4, 2, "PASS");
+				em.writeDataToExcel("PCApplication_TestCases", 3, 2, "PASS");
 			}else {
+				assertFalse(true);
 				System.err.println("Pic grid is active");
-				em.writeDataToExcel("PCApplication_TestCases", 4, 2, "FAIL");
+				em.writeDataToExcel("PCApplication_TestCases", 3, 2, "FAIL");
 			}
 		}catch(Exception e) {
 			e.printStackTrace();

@@ -27,11 +27,11 @@ public class PCApp_TestCase_002_C08 {
 		try {
 			if(profile.verifyProfile()!=null) {
 					profile.selectProfile();
-					em.writeDataToExcel("PCApplication_TestCases", 13, 2, "PASS");
+					em.writeDataToExcel("PCApplication_TestCases", 12, 2, "PASS");
 					
 			}else {
 				System.out.println("Profile is not visible");
-				em.writeDataToExcel("PCApplication_TestCases", 13, 2, "FAIL");
+				em.writeDataToExcel("PCApplication_TestCases", 12, 2, "FAIL");
 			}
 			
 		}catch(Exception e) {

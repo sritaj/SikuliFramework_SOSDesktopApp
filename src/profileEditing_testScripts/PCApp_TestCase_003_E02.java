@@ -29,7 +29,7 @@ public static void main(String[] args) throws FindFailed {
 		try {
 			if (profile.verifySelectProfile()!=null) {
 				profile.selectProfile();
-				grid.changeGridImage("13");
+				grid.changeGridImage("9");
 				em.writeDataToExcel("PCApplication_TestCases", 21, 2, "PASS");
 				
 			} else {

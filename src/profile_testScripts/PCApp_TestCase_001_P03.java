@@ -31,10 +31,10 @@ public class PCApp_TestCase_001_P03 {
 			int actualResult = grid.gridCounts();
 			if (expectedResult == actualResult ) {
 				System.out.println("Pic grid is having " + actualResult + " cells");
-				em.writeDataToExcel("PCApplication_TestCases", 5, 2, "PASS");
+				em.writeDataToExcel("PCApplication_TestCases", 4, 2, "PASS");
 			}else {
 				System.err.println("Pic grid doesn't meet requirements");
-				em.writeDataToExcel("PCApplication_TestCases", 5, 2, "PASS");
+				em.writeDataToExcel("PCApplication_TestCases", 4, 2, "PASS");
 			}
 		}catch(Exception e) {
 			e.printStackTrace();

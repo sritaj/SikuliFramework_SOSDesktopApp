@@ -1,6 +1,8 @@
 package profile_testScripts;
 
 
+import static org.testng.Assert.assertFalse;
+
 import java.io.FileNotFoundException;
 
 import org.sikuli.script.FindFailed;
@@ -31,11 +33,12 @@ public class PCApp_TestCase_001_P01 {
 		try {
 			if(profile.verifyProfile()!=null) {
 				System.out.println("User is in the Profile Tab");
-				em.writeDataToExcel("PCApplication_TestCases", 3, 2, "PASS");
+				em.writeDataToExcel("PCApplication_TestCases", 2, 2, "PASS");
 				
 			}else {
-				System.err.println("Profile t=Tab is not default");
-				em.writeDataToExcel("PCApplication_TestCases", 3, 11, "FAIL");
+				assertFalse(true);
+				System.err.println("Profile tab is not default");
+				em.writeDataToExcel("PCApplication_TestCases", 2, 2, "FAIL");
 			}
 		}catch(Exception e) {
 			e.printStackTrace();
