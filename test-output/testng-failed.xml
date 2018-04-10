@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
+    <classes>
+      <class name="testNG_Scripts.profileCreationSuite2_TestNG">
+        <methods>
+          <include name="PCApp_TestCase_002_C06"/>
+          <include name="preConditions"/>
+          <include name="postConditions"/>
+        </methods>
+      </class> <!-- testNG_Scripts.profileCreationSuite2_TestNG -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

@@ -13,7 +13,7 @@ This file is part of Automation Test Suite for Smart OLED Switch Project
 @author Sritaj <sritajpatel@unizentechnologies.com>
 @brief - This is a test script to automate the test case described below
 
-Test Case - Verify user is able to change the Profile Name*/
+Test Case - Verify user is able to add and change the default Profile Name*/
 
 public class PCApp_TestCase_002_C02 {
 	
@@ -28,10 +28,10 @@ public class PCApp_TestCase_002_C02 {
 			profile.addProfile();
 			if (profile.verifyProfileName()!=null) {
 				profile.setProfileName("Dynamic");
-				em.writeDataToExcel("PCApplication_TestCases", 7, 2, "PASS");
+				em.writeDataToExcel("PCApplication_TestCases", 6, 2, "PASS");
 			}else {
 				System.err.println("Profile name textfield is not active");
-				em.writeDataToExcel("PCApplication_TestCases", 7, 2, "FAIL");
+				em.writeDataToExcel("PCApplication_TestCases", 6, 2, "FAIL");
 			}
 		}catch(Exception e) {
 			e.printStackTrace();

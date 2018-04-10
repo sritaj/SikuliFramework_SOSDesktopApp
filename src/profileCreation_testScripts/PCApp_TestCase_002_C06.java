@@ -35,11 +35,11 @@ public static void main(String[] args) throws FindFailed {
 					profile.clickSaveActive();
 					if (profile.verifySelectProfile()!=null) {
 						System.out.println("User is re-directed to Profile TAB after save");
-						em.writeDataToExcel("PCApplication_TestCases", 11, 2, "PASS");
+						em.writeDataToExcel("PCApplication_TestCases", 10, 2, "PASS");
 			
 					}else {
 						System.err.println("User is not in the Profile Screen");
-						em.writeDataToExcel("PCApplication_TestCases", 11, 2, "FAIL");
+						em.writeDataToExcel("PCApplication_TestCases", 10, 2, "FAIL");
 					}
 				} else {
 					System.err.println("Save button is not active");

@@ -1,5 +1,7 @@
 package profileEditing_testScripts;
 
+import static org.testng.Assert.assertFalse;
+
 import org.sikuli.script.FindFailed;
 import org.sikuli.script.Screen;
 
@@ -24,15 +26,22 @@ public class PCApp_TestCase_003_E01 {
 		ExcelManipulation em = new ExcelManipulation();
 		
 		pc.appLaunch();
-		try {
+        try {
 			
 			if (profile.verifySelectProfile()!=null) {
 				profile.selectProfile();
-				profile.setProfileName("Dynamic");
-				em.writeDataToExcel("PCApplication_TestCases", 20, 2, "PASS");
+				try {
+					profile.setProfileName("Profile1");
+					em.writeDataToExcel("PCApplication_TestCases", 20, 2, "PASS");
+				}catch(Exception e) {
+					e.printStackTrace();
+				}
+				
 			}else {
+				assertFalse(true);
 				System.err.println("Profile is not available");
 				em.writeDataToExcel("PCApplication_TestCases", 20, 2, "FAIL");
+				pc.appForceQuit();
 			}
 			
 		}catch (Exception e) {

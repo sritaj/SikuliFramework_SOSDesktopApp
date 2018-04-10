@@ -30,9 +30,9 @@ public class PCApp_TestCase_006_A03 {
 		try {
 			psr.aboutTab();
 			psr.portSettingsTab();	
-			em.writeDataToExcel("PCApplication_TestCases", 35, 2, "PASS");
+			em.writeDataToExcel("PCApplication_TestCases", 40, 2, "PASS");
 		}catch(Exception e) {
-			em.writeDataToExcel("PCApplication_TestCases", 35, 2, "FAIL");
+			em.writeDataToExcel("PCApplication_TestCases", 40, 2, "FAIL");
 			e.printStackTrace();
 		}
 		

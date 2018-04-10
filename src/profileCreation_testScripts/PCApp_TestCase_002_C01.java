@@ -1,5 +1,7 @@
 package profileCreation_testScripts;
 
+import java.io.FileNotFoundException;
+
 import org.sikuli.script.FindFailed;
 import org.sikuli.script.Screen;
 
@@ -18,7 +20,7 @@ Test Case - Verify user is able to click the Add Profile Button*/
 public class PCApp_TestCase_002_C01 {
 	
 	
-	public static void main(String[] args) throws FindFailed {
+	public static void main(String[] args) throws FindFailed, FileNotFoundException {
 	
 		PC_App_Initialize pc = new PC_App_Initialize(new Screen());
 		PC_App_Profile profile = new PC_App_Profile(new Screen());
@@ -26,13 +28,13 @@ public class PCApp_TestCase_002_C01 {
 		
 		pc.appLaunch();
 		try {
-			if (profile.verifyProfile()!=null) {
 				profile.addProfile();
-				em.writeDataToExcel("PCApplication_TestCases", 6, 2, "PASS");
-			}else
-				em.writeDataToExcel("PCApplication_TestCases", 6, 2, "FAIL");
+				em.writeDataToExcel("PCApplication_TestCases", 5, 2, "PASS");
+			
 		}catch (Exception e) {
 			e.printStackTrace();
+			System.err.println("Failed");
+			em.writeDataToExcel("PCApplication_TestCases", 5, 2, "FAIL");
 		}
 		
 		pc.appQuit();

@@ -32,9 +32,9 @@ public class PCApp_TestCase_006_A04 {
 			
 			if(grid.imageGridState()==null) {
 				System.out.println("Pic grid is not active");
-				em.writeDataToExcel("PCApplication_TestCases", 36, 2, "PASS");
+				em.writeDataToExcel("PCApplication_TestCases", 41, 2, "PASS");
 			}else {
-				em.writeDataToExcel("PCApplication_TestCases", 36, 2, "FAIL");
+				em.writeDataToExcel("PCApplication_TestCases", 41, 2, "FAIL");
 				System.err.println("Pic grid is active");
 			}
 		}catch(Exception e) {

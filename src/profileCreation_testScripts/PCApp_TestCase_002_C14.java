@@ -32,17 +32,17 @@ public class PCApp_TestCase_002_C14 {
 			
 			if(profile.bitmapChecker()!=null) {
 				System.out.println("User cannot select the unsupported format");
-				em.writeDataToExcel("PCApplication_TestCases", 19, 2, "PASS");
+				em.writeDataToExcel("PCApplication_TestCases", 18, 2, "PASS");
 			}else {
 				System.err.println("User was able to select unspported BITMAP format");
-				em.writeDataToExcel("PCApplication_TestCases", 19, 2, "FAIL");
+				em.writeDataToExcel("PCApplication_TestCases", 18, 2, "FAIL");
 			}
 		}catch (Exception e) {
 			e.printStackTrace();
 		}
 		
 	
-		pc.appQuit();
+		pc.appForceQuit();
 }
 
 }

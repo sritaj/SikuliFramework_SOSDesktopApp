@@ -22,12 +22,14 @@ public class PCApp_TestCase_003_E04 {
 		PC_App_Initialize pc = new PC_App_Initialize(new Screen());
 		PC_App_Profile profile = new PC_App_Profile(new Screen());
 		ExcelManipulation em = new ExcelManipulation();
+		Screen sr = new Screen();
 		
 		pc.appLaunch();
 		
 		try {
 			if (profile.verifySelectProfile()!=null) {
 				profile.selectProfile();
+				sr.delayClick(500);
 				profile.setProfileName("Dynamic");
 				if (profile.verifySaveActive()!=null) {
 					profile.clickSaveActive();

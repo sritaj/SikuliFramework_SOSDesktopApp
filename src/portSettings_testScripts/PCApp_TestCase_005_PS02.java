@@ -1,4 +1,6 @@
 package portSettings_testScripts;
+import static org.testng.Assert.assertFalse;
+
 import java.io.FileNotFoundException;
 
 import org.sikuli.script.FindFailed;
@@ -28,9 +30,10 @@ public class PCApp_TestCase_005_PS02 {
 		try {
 			psr.portSettingsTab();
 			psr.profileTab();
-			em.writeDataToExcel("PCApplication_TestCases", 30, 2, "PASS");
+			em.writeDataToExcel("PCApplication_TestCases", 29, 2, "PASS");
 		}catch(Exception e) {
-			em.writeDataToExcel("PCApplication_TestCases", 30, 2, "FAIL");
+			assertFalse(true);
+			em.writeDataToExcel("PCApplication_TestCases", 29, 2, "FAIL");
 			e.printStackTrace();
 		}
 		
