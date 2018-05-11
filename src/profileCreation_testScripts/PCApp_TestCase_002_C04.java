@@ -30,7 +30,7 @@ public static void main(String[] args) throws FindFailed {
 		try {
 			profile.addProfile();
 			
-			grid.selectAllGridImage("14");
+			grid.selectAllGridImage();
 			
 			if (profile.verifySaveActive()!=null) {
 				System.out.println("Save button is active");

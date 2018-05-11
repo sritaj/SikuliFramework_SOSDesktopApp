@@ -31,7 +31,7 @@ public static void main(String[] args) throws FindFailed {
 			
 			if (profile.verifySelectProfile()!=null) {
 				profile.selectProfile();
-				grid.changeGridImage("13");
+				grid.changeGridImage();
 				if (profile.verifySaveActive()!=null) {
 					profile.clickSaveActive();
 					em.writeDataToExcel("PCApplication_TestCases", 24, 2, "PASS");

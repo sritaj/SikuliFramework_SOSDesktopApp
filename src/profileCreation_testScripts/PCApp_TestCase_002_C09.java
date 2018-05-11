@@ -29,7 +29,7 @@ public class PCApp_TestCase_002_C09 {
 		try {
 			if (profile.verifyProfile()!=null) {
 				profile.addProfile();
-				grid.selectGridImage("13");
+				grid.selectGridImage();
 				em.writeDataToExcel("PCApplication_TestCases", 13, 2, "PASS");
 				
 			}else {

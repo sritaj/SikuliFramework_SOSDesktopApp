@@ -1,3 +1,4 @@
+
 package profileCreation_testScripts;
 
 import org.sikuli.script.FindFailed;
@@ -27,30 +28,29 @@ public static void main(String[] args) throws FindFailed {
 		Screen sr = new Screen();
 		
 		pc.appLaunch();
-		try {
-			
-			profile.addProfile();
-			sr.delayClick(500);
-			profile.setProfileName("Entertainment");
-			grid.selectAllGridImage("14");
-			
-			if (profile.verifySaveActive()!=null) {
-				profile.clickSaveActive();
-				em.writeDataToExcel("PCApplication_TestCases", 17, 2, "PASS");
-				System.out.println("Profile is saved");
-			}else {
-				em.writeDataToExcel("PCApplication_TestCases", 17, 2, "FAIL");
-				System.err.println("Unable to save the profile");
+	
+			try {
 				
+				profile.addProfile();
+				sr.delayClick(500);
+//				profile.setProfileName("Entertainment");
+				grid.selectAllGridImage();
+				
+				if (profile.verifySaveActive()!=null) {
+					profile.clickSaveActive();
+					em.writeDataToExcel("PCApplication_TestCases", 17, 2, "PASS");
+					System.out.println("Profile is saved");
+				}else {
+					em.writeDataToExcel("PCApplication_TestCases", 17, 2, "FAIL");
+					System.err.println("Unable to save the profile");
+					
+				}
+				
+			}catch (Exception e) {
+				pc.appForceQuit();
+				e.printStackTrace();
 			}
-			
-		}catch (Exception e) {
-			pc.appForceQuit();
-			e.printStackTrace();
-		}
-		
-		
-		pc.appQuit();
+			pc.appQuit();
 		
 	}
 }

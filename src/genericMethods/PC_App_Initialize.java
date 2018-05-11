@@ -21,11 +21,12 @@ public class PC_App_Initialize {
 	
 	/* Below Screen class is initialized and path to required images and file are stored in the Strings defined */ 
 	Screen sr;
-	String appPath = "F:\\GitHub\\SmartOLEDSwitch\\App\\SOS_Build_1.0.0.3.exe";
+	String appPath = "F:\\GitHub\\SmartOLEDSwitch\\App\\SOS_Build_1.2.0.0.exe";
 	String crossbutton = "F:\\GitHub\\SmartOLEDSwitch\\Images\\Cross button.png";
 	String exitDialog = "F:\\GitHub\\SmartOLEDSwitch\\Images\\Exit Dialog popup.png";
 	String confirmexit = "F:\\GitHub\\SmartOLEDSwitch\\Images\\confirm_exit button.png";
 	String cancelexit = "F:\\GitHub\\SmartOLEDSwitch\\Images\\Cancel button.png";
+	String minimizeapp = "F:\\GitHub\\SmartOLEDSwitch\\Images\\Minimize.png";
 	
 	/* This method is used to launch the App */ 
 	public void appLaunch() {
@@ -71,5 +72,12 @@ public class PC_App_Initialize {
 		
 		Pattern close_window = new Pattern(cancelexit);
 		sr.click(close_window);
+	}
+	
+	public void minimizeApp() throws FindFailed {
+		
+		Pattern minimize_App = new Pattern(minimizeapp);
+		sr.click(minimize_App);
+		
 	}
 }

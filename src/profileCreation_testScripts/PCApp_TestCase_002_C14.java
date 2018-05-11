@@ -28,13 +28,13 @@ public class PCApp_TestCase_002_C14 {
 		pc.appLaunch();
 		try {
 			profile.addProfile();
-			grid.selectGridImage("Uneven");
+			grid.selectInvalidGridImage("Uneven");
 			
 			if(profile.bitmapChecker()!=null) {
 				System.out.println("User cannot select the unsupported format");
 				em.writeDataToExcel("PCApplication_TestCases", 18, 2, "PASS");
 			}else {
-				System.err.println("User was able to select unspported BITMAP format");
+				System.err.println("User was able to select unsupported BITMAP format");
 				em.writeDataToExcel("PCApplication_TestCases", 18, 2, "FAIL");
 			}
 		}catch (Exception e) {

@@ -28,7 +28,7 @@ public class PCApp_TestCase_002_C12 {
 			pc.appLaunch();
 			try {
 				profile.addProfile();
-				grid.selectGridImage("13");
+				grid.selectGridImage();
 				
 				if(profile.verifySave()!=null) {
 					System.out.println("Save button is not active");
