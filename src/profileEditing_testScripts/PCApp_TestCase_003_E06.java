@@ -32,7 +32,7 @@ public static void main(String[] args) throws FindFailed {
 			if (profile.verifySelectProfile()!=null) {
 				profile.selectProfile();
 				profile.setProfileName("Rocket");
-				grid.changeGridImage("13");
+				grid.changeGridImage();
 				em.writeDataToExcel("PCApplication_TestCases", 25, 2, "PASS");
 				
 			} else {

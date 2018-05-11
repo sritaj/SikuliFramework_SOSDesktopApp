@@ -42,13 +42,20 @@ public class PC_App_PicGrid {
 	}
 	
 	/* This method is to select image for a particular cell of the picture grid screen */ 
-	public void selectGridImage(String image) throws FindFailed {
+	public void selectGridImage() throws FindFailed {
+		
 		Pattern image_grid = new Pattern(imageGrid);
 		Pattern open_image = new Pattern(openImage);
 		Pattern filename_window = new Pattern(FileNameWindow);
+		
+		int max = 30;
+		int min = 1;
+		int image_number =  (int) ((Math.random()*((max-min)+1))+min);
+		String getImage = Integer.toString(image_number);
+		
 		sr.click(image_grid);
 		sr.click(filename_window);
-		sr.type(image);
+		sr.type(getImage);
 		sr.click(open_image);
 		
 	}
@@ -69,10 +76,11 @@ public class PC_App_PicGrid {
 	}
 	
 	/* This method is to verify the number of cells present in the picture grid screen */ 
-	public void selectAllGridImage(String image) throws FindFailed {
+	public void selectAllGridImage() throws FindFailed {
 		Pattern image_grid = new Pattern(imageGrid);
 		Pattern open_image = new Pattern(openImage);
 		Pattern filename_window = new Pattern(FileNameWindow);
+		
 		Iterator<Match> gridcount = sr.findAll(image_grid);
 	
 		int i=0;
@@ -85,7 +93,12 @@ public class PC_App_PicGrid {
 			gridcount.next().click(image_grid);
 				sr.click(filename_window);
 				
-			sr.type(image);
+				int max = 30;
+				int min = 1;
+				int image_number =  (int) ((Math.random()*((max-min)+1))+min);
+				String getImage = Integer.toString(image_number);
+				
+			sr.type(getImage);
 			sr.click(open_image);
 			sr.delayClick(1000);
 		
@@ -95,7 +108,7 @@ public class PC_App_PicGrid {
 	}
 	
 	/* This method is to change the image of a particular cell in the picture grid screen */ 
-	public void changeGridImage(String image) throws FindFailed {
+	public void changeGridImage() throws FindFailed {
 		
 		Pattern imageInGrid1 = new Pattern("F:\\GitHub\\SmartOLEDSwitch\\Images\\Image Present 1.png");
 		Pattern imageInGrid2 = new Pattern("F:\\GitHub\\SmartOLEDSwitch\\Images\\Image Present 2.png");
@@ -103,25 +116,42 @@ public class PC_App_PicGrid {
 		Pattern open_image = new Pattern(openImage);
 		Pattern filename_window = new Pattern(FileNameWindow);
 		
+		int max = 30;
+		int min = 1;
+		int image_number =  (int) ((Math.random()*((max-min)+1))+min);
+		String getImage = Integer.toString(image_number);
+		
 		if (sr.exists(imageInGrid1)!=null) {
 			
 			sr.click(imageInGrid1);
 			sr.click(filename_window);
-			sr.type(image);
+			sr.type(getImage);
 			sr.click(open_image);
 			sr.delayClick(1000);
 				
 		}else if (sr.exists(imageInGrid2)!=null) {
 			sr.click(imageInGrid2);
 			sr.click(filename_window);
-			sr.type(image);
+			sr.type(getImage);
 			sr.click(open_image);
 			sr.delayClick(1000);
 			
 		}else {
 			System.err.println("Unable to identify the set image in the Grid");
-		}
+		}	
 		
+	}
+	
+public void selectInvalidGridImage(String image) throws FindFailed {
+		
+		Pattern image_grid = new Pattern(imageGrid);
+		Pattern open_image = new Pattern(openImage);
+		Pattern filename_window = new Pattern(FileNameWindow);
+		
+		sr.click(image_grid);
+		sr.click(filename_window);
+		sr.type(image);
+		sr.click(open_image);
 		
 	}
 

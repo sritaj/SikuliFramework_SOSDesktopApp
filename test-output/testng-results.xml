@@ -1,37 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="66765" started-at="2018-04-10T05:47:29Z" finished-at="2018-04-10T05:48:35Z">
+  <suite name="Default suite" duration-ms="37091" started-at="2018-05-11T07:49:51Z" finished-at="2018-05-11T07:50:28Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="66765" started-at="2018-04-10T05:47:29Z" finished-at="2018-04-10T05:48:35Z">
-      <class name="testNG_Scripts.profileCreationSuite3_TestNG">
-        <test-method status="PASS" signature="preConditions()[pri:0, instance:testNG_Scripts.profileCreationSuite3_TestNG@1e88b3c]" name="preConditions" is-config="true" duration-ms="1138" started-at="2018-04-10T11:17:29Z" finished-at="2018-04-10T11:17:30Z">
+    <test name="Default test" duration-ms="37091" started-at="2018-05-11T07:49:51Z" finished-at="2018-05-11T07:50:28Z">
+      <class name="testNG_Scripts.PCApp_Script_006_A01">
+        <test-method status="PASS" signature="preConditions()[pri:0, instance:testNG_Scripts.PCApp_Script_006_A01@66a3ffec]" name="preConditions" is-config="true" duration-ms="16300" started-at="2018-05-11T13:19:51Z" finished-at="2018-05-11T13:20:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- preConditions -->
-        <test-method status="PASS" signature="PCApp_TestCase_002_C12()[pri:0, instance:testNG_Scripts.profileCreationSuite3_TestNG@1e88b3c]" name="PCApp_TestCase_002_C12" duration-ms="6596" started-at="2018-04-10T11:17:30Z" finished-at="2018-04-10T11:17:37Z">
+        <test-method status="PASS" signature="run()[pri:0, instance:testNG_Scripts.PCApp_Script_006_A01@66a3ffec]" name="run" duration-ms="17456" started-at="2018-05-11T13:20:08Z" finished-at="2018-05-11T13:20:25Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- PCApp_TestCase_002_C12 -->
-        <test-method status="PASS" signature="postConditions()[pri:0, instance:testNG_Scripts.profileCreationSuite3_TestNG@1e88b3c]" name="postConditions" is-config="true" duration-ms="2567" started-at="2018-04-10T11:17:37Z" finished-at="2018-04-10T11:17:39Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- postConditions -->
-        <test-method status="PASS" signature="preConditions()[pri:0, instance:testNG_Scripts.profileCreationSuite3_TestNG@1e88b3c]" name="preConditions" is-config="true" duration-ms="78" started-at="2018-04-10T11:17:39Z" finished-at="2018-04-10T11:17:39Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- preConditions -->
-        <test-method status="PASS" signature="PCApp_TestCase_002_C13()[pri:0, instance:testNG_Scripts.profileCreationSuite3_TestNG@1e88b3c]" name="PCApp_TestCase_002_C13" duration-ms="52491" started-at="2018-04-10T11:17:39Z" finished-at="2018-04-10T11:18:32Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- PCApp_TestCase_002_C13 -->
-        <test-method status="PASS" signature="postConditions()[pri:0, instance:testNG_Scripts.profileCreationSuite3_TestNG@1e88b3c]" name="postConditions" is-config="true" duration-ms="3836" started-at="2018-04-10T11:18:32Z" finished-at="2018-04-10T11:18:35Z">
+        </test-method> <!-- run -->
+        <test-method status="PASS" signature="postConditions()[pri:0, instance:testNG_Scripts.PCApp_Script_006_A01@66a3ffec]" name="postConditions" is-config="true" duration-ms="3278" started-at="2018-05-11T13:20:25Z" finished-at="2018-05-11T13:20:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- postConditions -->
-      </class> <!-- testNG_Scripts.profileCreationSuite3_TestNG -->
+      </class> <!-- testNG_Scripts.PCApp_Script_006_A01 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

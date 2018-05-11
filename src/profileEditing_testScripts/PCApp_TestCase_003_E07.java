@@ -34,7 +34,7 @@ public static void main(String[] args) throws FindFailed, FileNotFoundException 
 			if (profile.verifySelectProfile()!=null) {
 				profile.selectProfile();
 				profile.setProfileName("Rocket");
-				grid.changeGridImage("13");
+				grid.changeGridImage();
 				if (profile.verifySaveActive()!=null) {
 					profile.clickSaveActive();
 					em.writeDataToExcel("PCApplication_TestCases", 26, 2, "PASS");

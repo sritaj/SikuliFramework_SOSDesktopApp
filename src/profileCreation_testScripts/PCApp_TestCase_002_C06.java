@@ -30,7 +30,7 @@ public static void main(String[] args) throws FindFailed {
 		try {
 			if (profile.verifySelectProfile()!=null) {
 				profile.selectProfile();
-				grid.changeGridImage("13");
+				grid.changeGridImage();
 				if (profile.verifySaveActive()!=null) {
 					profile.clickSaveActive();
 					if (profile.verifySelectProfile()!=null) {
